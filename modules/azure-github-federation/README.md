@@ -34,10 +34,10 @@ module "todo_resource_name" {
 
 | Name | Type |
 |------|------|
-| [azuread_application.default](https://registry.terraform.io/providers/hashicorp/azuread/2.28.1/docs/resources/application) | resource |
-| [azuread_application_federated_identity_credential.default](https://registry.terraform.io/providers/hashicorp/azuread/2.28.1/docs/resources/application_federated_identity_credential) | resource |
-| [azuread_service_principal.default](https://registry.terraform.io/providers/hashicorp/azuread/2.28.1/docs/resources/service_principal) | resource |
-| [azurerm_role_assignment.default](https://registry.terraform.io/providers/hashicorp/azurerm/3.24.0/docs/resources/role_assignment) | resource |
+| [azuread_application.this](https://registry.terraform.io/providers/hashicorp/azuread/2.28.1/docs/resources/application) | resource |
+| [azuread_application_federated_identity_credential.this](https://registry.terraform.io/providers/hashicorp/azuread/2.28.1/docs/resources/application_federated_identity_credential) | resource |
+| [azuread_service_principal.this](https://registry.terraform.io/providers/hashicorp/azuread/2.28.1/docs/resources/service_principal) | resource |
+| [azurerm_role_assignment.this](https://registry.terraform.io/providers/hashicorp/azurerm/3.24.0/docs/resources/role_assignment) | resource |
 | [azuread_client_config.current](https://registry.terraform.io/providers/hashicorp/azuread/2.28.1/docs/data-sources/client_config) | data source |
 | [azurerm_subscription.current](https://registry.terraform.io/providers/hashicorp/azurerm/3.24.0/docs/data-sources/subscription) | data source |
 
