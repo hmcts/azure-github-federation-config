@@ -1,5 +1,5 @@
 ---
-- name: DTS AKS version checker
+- name: DTS SDS AKS version checker
   subjects:
     - 'repo:hmcts/aks-sds-deploy:ref:refs/heads/master'
     - 'repo:hmcts/aks-sds-deploy:pull_request'
