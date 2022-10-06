@@ -1,4 +1,5 @@
 output "app_registrations" {
+  description = "Information about created app registrations as well as their service principals required for github actions configuration"
   value = {
     for app in azuread_application.this : app.display_name => {
       id               = app.id

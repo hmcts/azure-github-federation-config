@@ -55,7 +55,7 @@ module "todo_resource_name" {
 
 | Name | Description |
 |------|-------------|
-| <a name="output_app_registrations"></a> [app\_registrations](#output\_app\_registrations) | n/a |
+| <a name="output_app_registrations"></a> [app\_registrations](#output\_app\_registrations) | Information about created app registrations as well as their service principals required for github actions configuration |
 <!-- END_TF_DOCS -->
 
 ## Contributing
