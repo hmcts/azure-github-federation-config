@@ -1,7 +1,10 @@
 terraform {
   backend "azurerm" {}
 }
-
+provider "azuread" {}
+provider "azurerm" {
+  features {}
+}
 module "this" {
   source            = "../../modules/azure-github-federation"
   app_registrations = yamldecode(file("${path.module}/../../app-registrations.yaml"))
