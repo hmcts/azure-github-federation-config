@@ -6,7 +6,7 @@
   permissions:
     - role_definition_name: Reader
       scopes:
-        - /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/NetworkWatcherRG  # DTS-SHAREDSERVICES-SBOX
+        - /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/ss-sbox-00-rg/providers/Microsoft.ContainerService/managedClusters/ss-sbox-00-aks  # DTS-SHAREDSERVICES-SBOX
 
 - name: DTS CFT AKS version checker
   subjects:
