@@ -9,3 +9,13 @@
     - 'repo:hmcts/aks-cft-deploy:ref:refs/heads/main'
     - 'repo:hmcts/aks-cft-deploy:pull_request'
   permissions: []
+- name: DTS SDS AKS Auto-Shutdown
+  subjects:
+    - 'repo:hmcts/aks-sds-deploy:ref:refs/heads/master'
+    - 'repo:hmcts/aks-sds-deploy:pull_request'
+  permissions: []
+- name: DTS CFT AKS Auto-Shutdown
+  subjects:
+    - 'repo:hmcts/aks-cft-deploy:ref:refs/heads/main'
+    - 'repo:hmcts/aks-cft-deploy:pull_request'
+  permissions: []
