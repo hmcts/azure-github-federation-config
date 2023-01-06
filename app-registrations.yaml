@@ -13,7 +13,11 @@
   subjects:
     - 'repo:hmcts/aks-auto-shutdown:ref:refs/heads/master'
     - 'repo:hmcts/aks-auto-shutdown:pull_request'
-  permissions: []
+  permissions: 
+    - role_definition_name: "Key Vault Secrets User"
+      scopes: # list of scopes to assign
+        - /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/cnp-core-infra/providers/Microsoft.KeyVault/vaults/infra-vault-sandbox
+
 - name: Sandbox Cleanup
   subjects:
     - 'repo:hmcts/sandbox-auto-cleardown:ref:refs/heads/master'
