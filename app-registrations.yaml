@@ -36,3 +36,12 @@
         - /subscriptions/cdc31e8e-43f4-4c8a-8b50-635e954c27d3
         - /subscriptions/1fe7db01-9981-4ed3-983c-163dd50ba43a
         - /subscriptions/5709598c-3a1c-4535-8979-f10948b9a031   
+- name: DTS AKS Application Testing
+  subjects:
+    - 'repo:hmcts/sds-flux-config:ref:refs/heads/master'
+    - 'repo:hmcts/sds-flux-config:pull_request'
+  permissions:
+    - role_definition_name: Contributor
+      scopes:
+        - /subscriptions/64b1c6d6-1481-44ad-b620-d8fe26a2c768
+        - /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab
