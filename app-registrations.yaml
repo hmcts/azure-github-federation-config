@@ -17,6 +17,7 @@
     - 'repo:hmcts/aks-auto-shutdown-1:pull_request'
     - 'repo:hmcts/aks-auto-shutdown-releases:ref:refs/heads/master'
     - 'repo:hmcts/aks-auto-shutdown-releases:pull_request'
+    - 'repo:hmcts/aks-auto-shutdown-releases:ref:refs/heads/jh-shutdown-1'
   permissions: []
 - name: Sandbox Cleanup
   subjects:
