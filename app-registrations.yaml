@@ -48,3 +48,12 @@
       scopes:
         - /subscriptions/64b1c6d6-1481-44ad-b620-d8fe26a2c768
         - /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab
+- name: DTS FinOps Enterprise Rporting
+  subjects: # list of github repositories authorised to use this app registration
+    - 'repo:hmcts/finops-reporting-incremental-export:ref:refs/heads/master'
+    - 'repo:hmcts/finops-reporting-incremental-export:pull_request'
+  permissions: # list of azure builtin-roles to assign to each of scopes defined within it.
+    - role_definition_name: Contributor
+      scopes:
+        - /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab
+        - /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/finops-reporting-sbox-rg
