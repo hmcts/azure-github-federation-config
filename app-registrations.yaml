@@ -55,5 +55,5 @@
   permissions: # list of azure builtin-roles to assign to each of scopes defined within it.
     - role_definition_name: Contributor
       scopes:
-        - /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab
-        - /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/finops-reporting-sbox-rg
+        - /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb
+        - /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/finops-reporting-sbox-rg
