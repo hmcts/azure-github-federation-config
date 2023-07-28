@@ -43,6 +43,6 @@ resource "azuread_application_federated_identity_credential" "this" {
   application_object_id = azuread_application.this[each.value.app].object_id
   display_name          = replace(replace(each.value.subject, "/", "__"), ":", "_") // API is not accepting ":" or "/" replacing with "_" and "__"
   audiences             = ["api://AzureADTokenExchange"]
-  issuer                = "https://token.actions.githubusercontent.com"
+  issuer                = "https://token.actions.githubusercontent.com/hmcts"
   subject               = each.value.subject
 }
