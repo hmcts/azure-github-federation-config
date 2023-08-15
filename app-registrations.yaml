@@ -18,7 +18,18 @@
     - 'repo:hmcts/aks-auto-shutdown-releases:ref:refs/heads/master'
     - 'repo:hmcts/aks-auto-shutdown-releases:pull_request'
     - 'repo:hmcts/aks-auto-shutdown-releases:ref:refs/heads/jh-shutdown-1'
-  permissions: []
+  permissions:
+    - role_definition_name: 'Virtual Machine Contributor'
+      scopes:
+        - /providers/Microsoft.Management/managementGroups/CFT-NonProd
+        - /providers/Microsoft.Management/managementGroups/CFT-Sandbox
+        - /providers/Microsoft.Management/managementGroups/Heritage-NonProd
+        - /providers/Microsoft.Management/managementGroups/Heritage-Sandbox
+        - /providers/Microsoft.Management/managementGroups/Platform-NonProd
+        - /providers/Microsoft.Management/managementGroups/Platform-Sandbox
+        - /providers/Microsoft.Management/managementGroups/SDS-NonProd
+        - /providers/Microsoft.Management/managementGroups/SDS-Sandbox
+        - /providers/Microsoft.Management/managementGroups/Security
 - name: Sandbox Cleanup
   subjects:
     - 'repo:hmcts/sandbox-auto-cleardown:ref:refs/heads/master'
