@@ -70,8 +70,8 @@
         - /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/finops-reporting-sbox-rg
 - name: DTS Orphaned Resource Cleanup
   subjects:
-    - 'repo:hmcts/dtspo-orphan-resources-cleanup/tree/master'
-    - 'repo:hmcts/dtspo-orphan-resources-cleanup/tree/dxw/orphan-testing'
+    - 'repo:hmcts/dtspo-orphan-resources-cleanup:ref:refs/heads/master'
+    - 'repo:hmcts/dtspo-orphan-resources-cleanup:ref:refs/heads/dxw/orphan-testing'
   permissions:
     - role_definition_name: Orphan Resource Cleanup Read/Delete
       scopes:
