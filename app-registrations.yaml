@@ -71,9 +71,15 @@
 - name: DTS Orphaned Resource Cleanup
   subjects:
     - 'repo:hmcts/dtspo-orphan-resources-cleanup:ref:refs/heads/master'
-    - 'repo:hmcts/dtspo-orphan-resources-cleanup:ref:refs/heads/dxw/orphan-testing'
   permissions:
     - role_definition_name: Orphan Resource Cleanup Read/Delete
       scopes:
         - /providers/Microsoft.Management/managementGroups/CFT-Sandbox
-        - /providers/Microsoft.Management/managementGroups/Platform-Prod
+        - /providers/Microsoft.Management/managementGroups/CFT-NonProd
+        - /providers/Microsoft.Management/managementGroups/Heritage-NonProd
+        - /providers/Microsoft.Management/managementGroups/Heritage-Sandbox
+        - /providers/Microsoft.Management/managementGroups/Platform-NonProd
+        - /providers/Microsoft.Management/managementGroups/Platform-Sandbox
+        - /providers/Microsoft.Management/managementGroups/SDS-NonProd
+        - /providers/Microsoft.Management/managementGroups/SDS-Sandbox
+        - /providers/Microsoft.Management/managementGroups/Security
