@@ -19,7 +19,7 @@
     - 'repo:hmcts/aks-auto-shutdown-releases:pull_request'
     - 'repo:hmcts/aks-auto-shutdown-releases:ref:refs/heads/jh-shutdown-1'
   permissions:
-    - role_definition_name: 'Virtual Machine Contributor'
+    - role_definition_name: 'Contributor'
       scopes:
         - /providers/Microsoft.Management/managementGroups/CFT-NonProd
         - /providers/Microsoft.Management/managementGroups/CFT-Sandbox
