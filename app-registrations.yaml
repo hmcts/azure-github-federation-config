@@ -85,7 +85,7 @@
         - /providers/Microsoft.Management/managementGroups/Security
 - name: WAF Monitoring
   subjects:
-    - 'repo:hmcts/azure-waff-monitoring:ref:refs/heads/master'
+    - 'repo:hmcts/azure-waf-monitoring:ref:refs/heads/master'
   permissions:
     - role_definition_name: Reader
       scopes:
