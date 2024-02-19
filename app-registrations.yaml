@@ -89,7 +89,6 @@
   permissions:
     - role_definition_name: Reader
       scopes:
-        - /subscriptions/1baf5470-1c3e-40d3-a6f7-74bfbce4b348/resourceGroups/core-infra-intsvc-rg/cftptl-intsvc
         - /providers/Microsoft.Management/managementGroups/CFT-Sandbox
         - /providers/Microsoft.Management/managementGroups/CFT-NonProd
         - /providers/Microsoft.Management/managementGroups/CFT-Prod
@@ -99,3 +98,6 @@
         - /providers/Microsoft.Management/managementGroups/Heritage-Sandbox
         - /providers/Microsoft.Management/managementGroups/Heritage-NonProd
         - /providers/Microsoft.Management/managementGroups/Heritage-Prod
+    - role_definition_name: Key Vault Secrets User
+      scopes:
+        - /subscriptions/1baf5470-1c3e-40d3-a6f7-74bfbce4b348/resourceGroups/core-infra-intsvc-rg/providers/Microsoft.KeyVault/vaults/cftptl-intsvc
