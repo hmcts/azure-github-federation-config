@@ -83,3 +83,18 @@
         - /providers/Microsoft.Management/managementGroups/SDS-NonProd
         - /providers/Microsoft.Management/managementGroups/SDS-Sandbox
         - /providers/Microsoft.Management/managementGroups/Security
+- name: WAF Monitoring
+  subjects:
+    - 'repo:hmcts/azure-waff-monitoring:ref:refs/heads/master'
+  permissions:
+    - role_definition_name: Reader
+      scopes:
+        - /providers/Microsoft.Management/managementGroups/CFT-Sandbox
+        - /providers/Microsoft.Management/managementGroups/CFT-NonProd
+        - /providers/Microsoft.Management/managementGroups/CFT-Prod
+        - /providers/Microsoft.Management/managementGroups/SDS-Sandbox
+        - /providers/Microsoft.Management/managementGroups/SDS-NonProd
+        - /providers/Microsoft.Management/managementGroups/SDS-Prod
+        - /providers/Microsoft.Management/managementGroups/Heritage-Sandbox
+        - /providers/Microsoft.Management/managementGroups/Heritage-NonProd
+        - /providers/Microsoft.Management/managementGroups/Heritage-Prod
