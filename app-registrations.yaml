@@ -31,6 +31,14 @@
         - /providers/Microsoft.Management/managementGroups/SDS-NonProd
         - /providers/Microsoft.Management/managementGroups/SDS-Sandbox
         - /providers/Microsoft.Management/managementGroups/Security
+- name: darts-portal
+  subjects:
+    - 'repo:hmcts/darts-portal:ref:refs/heads/master'
+    - 'repo:hmcts/darts-portal:pull_request'
+  permissions:
+    - role_definition_name: 'Reader'
+      scopes:
+        - /providers/Microsoft.Management/managementGroups/CFT-NonProd
 - name: Sandbox Cleanup
   subjects:
     - 'repo:hmcts/sandbox-auto-cleardown:ref:refs/heads/master'
