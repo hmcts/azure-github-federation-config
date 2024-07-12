@@ -31,7 +31,7 @@
         - /providers/Microsoft.Management/managementGroups/SDS-NonProd
         - /providers/Microsoft.Management/managementGroups/SDS-Sandbox
         - /providers/Microsoft.Management/managementGroups/Security
-- name: darts-portal-v2
+- name: dtspo-18222-jh
   subjects:
     - 'repo:hmcts/darts-portal:ref:refs/heads/master'
     - 'repo:hmcts/darts-portal:pull_request'
