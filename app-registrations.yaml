@@ -107,3 +107,9 @@
         - /providers/Microsoft.Management/managementGroups/Heritage-Sandbox
         - /providers/Microsoft.Management/managementGroups/Heritage-NonProd
         - /providers/Microsoft.Management/managementGroups/Heritage-Prod
+- name: DTS HMCTS way indexer
+  subjects:
+    - 'repo:hmcts/hmcts.github.io:ref:refs/heads/source'
+    - 'repo:hmcts/hmcts.github.io:ref:refs/heads/master'
+    - 'repo:hmcts/hmcts.github.io:pull_request'
+  permissions: []
