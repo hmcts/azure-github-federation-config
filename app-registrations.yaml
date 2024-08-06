@@ -14,11 +14,8 @@
     - 'repo:hmcts/auto-shutdown:ref:refs/heads/master'
     - 'repo:hmcts/auto-shutdown:pull_request'
     - 'repo:hmcts/auto-shutdown-dev:ref:refs/heads/master'
+    - 'repo:hmcts/auto-shutdown-dev:ref:refs/heads/development'
     - 'repo:hmcts/auto-shutdown-dev:pull_request'
-    - 'repo:hmcts/aks-auto-shutdown-releases:ref:refs/heads/master'
-    - 'repo:hmcts/aks-auto-shutdown-releases:pull_request'
-    - 'repo:hmcts/DTSPO-17195_auto-shutdown:ref:refs/heads/master'
-    - 'repo:hmcts/DTSPO-17195_auto-shutdown:pull_request'
   permissions:
     - role_definition_name: 'Contributor'
       scopes:
