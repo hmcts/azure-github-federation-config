@@ -109,4 +109,5 @@
     - 'repo:hmcts/hmcts.github.io:ref:refs/heads/source'
     - 'repo:hmcts/hmcts.github.io:ref:refs/heads/master'
     - 'repo:hmcts/hmcts.github.io:pull_request'
+    - 'repo:hmcts/hmcts.github.io:environment:github-pages'
   permissions: []
