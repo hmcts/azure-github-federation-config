@@ -113,7 +113,7 @@
 - name: DTS Recipe Receiver testing
   subjects:
     - 'repo:hmcts/recipe-receiver:ref:refs/heads/master'
-    - 'repo:hmcts/recipe-receiver:ref:pull_request'
+    - 'repo:hmcts/recipe-receiver:pull_request'
   permissions:
     - role_definition_name: Reader
       scopes:
