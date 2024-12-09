@@ -49,12 +49,10 @@
         - /subscriptions/2307d175-7e49-434b-9ac2-515529b845f2
         - /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783
         - /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab
-        - /subscriptions/0c1744f8-9e63-4742-9c28-c066fd2e6eee
         - /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb
         - /subscriptions/ea3a8c1e-af9d-4108-bc86-a7e2d267f49c
         - /subscriptions/cdc31e8e-43f4-4c8a-8b50-635e954c27d3
         - /subscriptions/1fe7db01-9981-4ed3-983c-163dd50ba43a
-        - /subscriptions/5709598c-3a1c-4535-8979-f10948b9a031
 - name: DTS AKS Application Testing
   subjects:
     - 'repo:hmcts/sds-flux-config:ref:refs/heads/master'
