@@ -1,6 +1,6 @@
 terraform {
   backend "azurerm" {}
-  required_version = "1.3.9"
+  required_version = "1.10.2"
 }
 provider "azuread" {}
 provider "azurerm" {
