@@ -121,3 +121,13 @@
         - /providers/Microsoft.Management/managementGroups/SDS-Sandbox
         - /providers/Microsoft.Management/managementGroups/SDS-NonProd
         - /providers/Microsoft.Management/managementGroups/SDS-Prod
+- name: DTS Auto DB Query
+  subjects:
+    - 'repo:hmcts/postgresql-cron-jobs:ref:refs/heads/master'
+    - 'repo:hmcts/postgresql-cron-jobs:pull_request'
+  permissions:
+    - role_definition_name: 'Azure Kubernetes Service Cluster User Role'
+      scopes:
+        - /subscriptions/96c274ce-846d-4e48-89a7-d528432298a7 # DCD-CFTAPPS-STG
+        - /subscriptions/8cbc6f36-7c56-4963-9d36-739db5d00b27 # DCD-CFTAPPS-PROD
+        - /subscriptions/5ca62022-6aa2-4cee-aaa7-e7536c8d566c # DTS-SHAREDSERVICES-PROD
