@@ -131,7 +131,7 @@
         - /subscriptions/96c274ce-846d-4e48-89a7-d528432298a7 # DCD-CFTAPPS-STG
         - /subscriptions/8cbc6f36-7c56-4963-9d36-739db5d00b27 # DCD-CFTAPPS-PROD
         - /subscriptions/5ca62022-6aa2-4cee-aaa7-e7536c8d566c # DTS-SHAREDSERVICES-PROD
-- name: DTS Platforms GitHub Actions ACR Publisher
+- name: DTS Platform Operations GitHub Actions ACR Publisher
   subjects:
     - 'repo:hmcts/azure-cftapps-monitoring:ref:refs/heads/master'
     - 'repo:hmcts/azure-cftapps-monitoring:pull_request'
@@ -191,62 +191,59 @@
       scopes:
         - /subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/rpe-acr-prod-rg # DCD-CNP-Prod
         - /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/cnp-acr-rg # DCD-CFT-Sandbox
-- name: DTS Developers GitHub Actions ACR Publisher (a-d)
+- name: DTS Developers GitHub Actions ACR Publisher 1
   subjects:
-    - 'repo:hmcts/am-slack-help-bot:pull_request'
     - 'repo:hmcts/am-slack-help-bot:ref:refs/heads/main'
-    - 'repo:hmcts/ccd-definition-processor:pull_request'
+    - 'repo:hmcts/am-slack-help-bot:pull_request'
     - 'repo:hmcts/ccd-definition-processor:ref:refs/heads/master'
-    - 'repo:hmcts/ccd-slack-help-bot:pull_request'
+    - 'repo:hmcts/ccd-definition-processor:pull_request'
     - 'repo:hmcts/ccd-slack-help-bot:ref:refs/heads/master'
-    - 'repo:hmcts/ccpay-slack-help-bot:pull_request'
+    - 'repo:hmcts/ccd-slack-help-bot:pull_request'
     - 'repo:hmcts/ccpay-slack-help-bot:ref:refs/heads/main'
-    - 'repo:hmcts/cot-slack-help-bot:pull_request'
+    - 'repo:hmcts/ccpay-slack-help-bot:pull_request'
     - 'repo:hmcts/cot-slack-help-bot:ref:refs/heads/main'
-    - 'repo:hmcts/devextreme-poc-spa:pull_request'
+    - 'repo:hmcts/cot-slack-help-bot:pull_request'
     - 'repo:hmcts/devextreme-poc-spa:ref:refs/heads/main'
-    - 'repo:hmcts/devextreme-poc-ssr:pull_request'
+    - 'repo:hmcts/devextreme-poc-spa:pull_request'
     - 'repo:hmcts/devextreme-poc-ssr:ref:refs/heads/main'
-  permissions:
-    - role_definition_name: 'AcrPush'
-      scopes:
-        - /subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/rpe-acr-prod-rg # DCD-CNP-Prod
-        - /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/cnp-acr-rg # DCD-CFT-Sandbox
-    - role_definition_name: 'AcrPull'
-      scopes:
-        - /subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/rpe-acr-prod-rg # DCD-CNP-Prod
-        - /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/cnp-acr-rg # DCD-CFT-Sandbox
-- name: DTS Developers GitHub Actions ACR Publisher (e-i)
-  subjects:
-    - 'repo:hmcts/em-slack-help-bot:pull_request'
+    - 'repo:hmcts/devextreme-poc-ssr:pull_request'
     - 'repo:hmcts/em-slack-help-bot:ref:refs/heads/master'
-    - 'repo:hmcts/exui-slack-help-bot:pull_request'
+    - 'repo:hmcts/em-slack-help-bot:pull_request'
     - 'repo:hmcts/exui-slack-help-bot:ref:refs/heads/main'
-    - 'repo:hmcts/fact-slack-help-bot:pull_request'
+    - 'repo:hmcts/exui-slack-help-bot:pull_request'
     - 'repo:hmcts/fact-slack-help-bot:ref:refs/heads/master'
-    - 'repo:hmcts/idam-slack-help-bot:pull_request'
+    - 'repo:hmcts/fact-slack-help-bot:pull_request'
+  permissions:
+    - role_definition_name: 'AcrPush'
+      scopes:
+        - /subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/rpe-acr-prod-rg # DCD-CNP-Prod
+        - /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/cnp-acr-rg # DCD-CFT-Sandbox
+    - role_definition_name: 'AcrPull'
+      scopes:
+        - /subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/rpe-acr-prod-rg # DCD-CNP-Prod
+        - /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/cnp-acr-rg # DCD-CFT-Sandbox
+- name: DTS Developers GitHub Actions ACR Publisher 2
+  subjects:
     - 'repo:hmcts/idam-slack-help-bot:ref:refs/heads/master'
-    - 'repo:hmcts/incident-response-api:pull_request'
+    - 'repo:hmcts/idam-slack-help-bot:pull_request'
     - 'repo:hmcts/incident-response-api:ref:refs/heads/master'
-    - 'repo:hmcts/incident-response-frontend:pull_request'
+    - 'repo:hmcts/incident-response-api:pull_request'
     - 'repo:hmcts/incident-response-frontend:ref:refs/heads/master'
-  permissions:
-    - role_definition_name: 'AcrPush'
-      scopes:
-        - /subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/rpe-acr-prod-rg # DCD-CNP-Prod
-        - /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/cnp-acr-rg # DCD-CFT-Sandbox
-    - role_definition_name: 'AcrPull'
-      scopes:
-        - /subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/rpe-acr-prod-rg # DCD-CNP-Prod
-        - /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/cnp-acr-rg # DCD-CFT-Sandbox
-- name: DTS Developers GitHub Actions ACR Publisher (j-p)
-  subjects:
-    - 'repo:hmcts/justicetranscribe-frontend:pull_request'
+    - 'repo:hmcts/incident-response-frontend:pull_request'
     - 'repo:hmcts/justicetranscribe-frontend:ref:refs/heads/master'
-    - 'repo:hmcts/justicetranscribe-web:pull_request'
+    - 'repo:hmcts/justicetranscribe-frontend:pull_request'
     - 'repo:hmcts/justicetranscribe-web:ref:refs/heads/master'
-    - 'repo:hmcts/POFCC-slack-help-bot:pull_request'
+    - 'repo:hmcts/justicetranscribe-web:pull_request'
     - 'repo:hmcts/POFCC-slack-help-bot:ref:refs/heads/master'
+    - 'repo:hmcts/POFCC-slack-help-bot:pull_request'
+    - 'repo:hmcts/rd-slack-help-bot:ref:refs/heads/master'
+    - 'repo:hmcts/rd-slack-help-bot:pull_request'
+    - 'repo:hmcts/rse-idam-simulator:ref:refs/heads/master'
+    - 'repo:hmcts/rse-idam-simulator:pull_request'
+    - 'repo:hmcts/telerik-poc-spa:ref:refs/heads/main'
+    - 'repo:hmcts/telerik-poc-spa:pull_request'
+    - 'repo:hmcts/telerik-poc-ssr:ref:refs/heads/main'
+    - 'repo:hmcts/telerik-poc-ssr:pull_request'
   permissions:
     - role_definition_name: 'AcrPush'
       scopes:
@@ -256,18 +253,10 @@
       scopes:
         - /subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/rpe-acr-prod-rg # DCD-CNP-Prod
         - /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/cnp-acr-rg # DCD-CFT-Sandbox
-- name: DTS Developers GitHub Actions ACR Publisher (q-z)
+- name: DTS Developers GitHub Actions ACR Publisher 3
   subjects:
-    - 'repo:hmcts/rd-slack-help-bot:pull_request'
-    - 'repo:hmcts/rd-slack-help-bot:ref:refs/heads/master'
-    - 'repo:hmcts/rse-idam-simulator:pull_request'
-    - 'repo:hmcts/rse-idam-simulator:ref:refs/heads/master'
-    - 'repo:hmcts/telerik-poc-spa:pull_request'
-    - 'repo:hmcts/telerik-poc-spa:ref:refs/heads/main'
-    - 'repo:hmcts/telerik-poc-ssr:pull_request'
-    - 'repo:hmcts/telerik-poc-ssr:ref:refs/heads/main'
-    - 'repo:hmcts/wa-slack-help-bot:pull_request'
     - 'repo:hmcts/wa-slack-help-bot:ref:refs/heads/main'
+    - 'repo:hmcts/wa-slack-help-bot:pull_request'
   permissions:
     - role_definition_name: 'AcrPush'
       scopes:
