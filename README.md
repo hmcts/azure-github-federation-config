@@ -15,7 +15,20 @@ See also:
 - terraform code to take above YAML file as input variables
 - terraform module to create app registrations, service principals, federated identity as well as role assignments
 
-#### Adding new app_registrations/integrations
+### Limitation
+
+Please be aware that there is a hardcoded limit with Azure App Registrations which we cannot bypass.
+A single App Registration can only accomadate 20 federated credentials.
+
+Every line under the `subjects` field will take a federated credential from that limit of 20.
+
+Please account for this when adding a subject to an existing App Registration (below) an ensure the `subjects` is no longer than 20 lines.
+
+If you need more than one subject line and it will run over the 20 limit then its best to create a new App Registration.
+
+For those App Registrations set up for `GitHub Actions` please increment the naming +1 from the previously created App Registration
+
+### Adding new app_registrations/integrations
 
 Edit [app-registrations.yaml](app-registrations.yaml) and add new app registration as in below example:
 
