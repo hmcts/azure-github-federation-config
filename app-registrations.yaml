@@ -137,8 +137,7 @@
 ## Please check the readme in this folder before making any changes to these as there
 ## are known limitations
 ########################################################################################
-
-- name: DTS Platform Operations GitHub Actions ACR Publisher
+- name: DTS Platform Operations GitHub Actions ACR Publisher 1
   subjects:
     - 'repo:hmcts/azure-cftapps-monitoring:ref:refs/heads/master'
     - 'repo:hmcts/azure-cftapps-monitoring:pull_request'
@@ -169,7 +168,12 @@
       scopes:
         - /subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/rpe-acr-prod-rg # DCD-CNP-Prod
         - /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/cnp-acr-rg # DCD-CFT-Sandbox
-- name: DTS Shared GitHub Actions ACR Publisher
+########################################################################################
+## The below App Registrations have been created for use in GitHub Actions workflows
+## Please check the readme in this folder before making any changes to these as there
+## are known limitations
+########################################################################################
+- name: DTS Shared GitHub Actions ACR Publisher 1
   subjects:
     - 'repo:hmcts/mssql-backup-converter:ref:refs/heads/main'
     - 'repo:hmcts/mssql-backup-converter:pull_request'
@@ -198,6 +202,11 @@
       scopes:
         - /subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/rpe-acr-prod-rg # DCD-CNP-Prod
         - /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/cnp-acr-rg # DCD-CFT-Sandbox
+########################################################################################
+## The below App Registrations have been created for use in GitHub Actions workflows
+## Please check the readme in this folder before making any changes to these as there
+## are known limitations
+########################################################################################
 - name: DTS Developers GitHub Actions ACR Publisher 1
   subjects:
     - 'repo:hmcts/am-slack-help-bot:ref:refs/heads/main'
@@ -229,6 +238,11 @@
       scopes:
         - /subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/rpe-acr-prod-rg # DCD-CNP-Prod
         - /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/cnp-acr-rg # DCD-CFT-Sandbox
+########################################################################################
+## The below App Registrations have been created for use in GitHub Actions workflows
+## Please check the readme in this folder before making any changes to these as there
+## are known limitations
+########################################################################################
 - name: DTS Developers GitHub Actions ACR Publisher 2
   subjects:
     - 'repo:hmcts/idam-slack-help-bot:ref:refs/heads/master'
@@ -260,6 +274,11 @@
       scopes:
         - /subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/rpe-acr-prod-rg # DCD-CNP-Prod
         - /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/cnp-acr-rg # DCD-CFT-Sandbox
+########################################################################################
+## The below App Registrations have been created for use in GitHub Actions workflows
+## Please check the readme in this folder before making any changes to these as there
+## are known limitations
+########################################################################################
 - name: DTS Developers GitHub Actions ACR Publisher 3
   subjects:
     - 'repo:hmcts/wa-slack-help-bot:ref:refs/heads/main'
@@ -273,4 +292,3 @@
       scopes:
         - /subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/rpe-acr-prod-rg # DCD-CNP-Prod
         - /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/cnp-acr-rg # DCD-CFT-Sandbox
-###########################################################################################################
