@@ -177,6 +177,8 @@
   subjects:
     - 'repo:hmcts/acr-base-importer:ref:refs/heads/master'
     - 'repo:hmcts/acr-base-importer:pull_request'
+    - 'repo:hmcts/azure-github-federation-config:ref:refs/heads/main'
+    - 'repo:hmcts/azure-github-federation-config:pull_request'
   permissions:
     - role_definition_name: 'AcrPush'
       scopes:
@@ -301,19 +303,6 @@
   subjects:
     - 'repo:hmcts/wa-slack-help-bot:ref:refs/heads/main'
     - 'repo:hmcts/wa-slack-help-bot:pull_request'
-  permissions:
-    - role_definition_name: 'AcrPush'
-      scopes:
-        - /subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/rpe-acr-prod-rg # DCD-CNP-Prod
-        - /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/cnp-acr-rg # DCD-CFT-Sandbox
-    - role_definition_name: 'AcrPull'
-      scopes:
-        - /subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/rpe-acr-prod-rg # DCD-CNP-Prod
-        - /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/cnp-acr-rg # DCD-CFT-Sandbox
-- name: DTS Kubectl OCI Container Publisher
-  subjects:
-    - 'repo:hmcts/azure-github-federation-config:ref:refs/heads/main'
-    - 'repo:hmcts/azure-github-federation-config:pull_request'
   permissions:
     - role_definition_name: 'AcrPush'
       scopes:
