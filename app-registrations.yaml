@@ -177,7 +177,7 @@
   subjects:
     - 'repo:hmcts/acr-base-importer:ref:refs/heads/master'
     - 'repo:hmcts/acr-base-importer:pull_request'
-    - 'repo:hmcts/hmcts-kubectl:ref:refs/heads/main'
+    - 'repo:hmcts/hmcts-kubectl:ref:refs/heads/master'
     - 'repo:hmcts/hmcts-kubectl:pull_request'
   permissions:
     - role_definition_name: 'AcrPush'
