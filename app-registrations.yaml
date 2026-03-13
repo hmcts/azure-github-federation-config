@@ -213,6 +213,10 @@
     - 'repo:hmcts/cs-slack-help-bot:pull_request'
     - 'repo:hmcts/expressjs-monorepo-template:ref:refs/heads/master'
     - 'repo:hmcts/expressjs-monorepo-template:pull_request'
+    - 'repo:hmcts/expressjs-monorepo-template:ref:refs/heads/master'
+    - 'repo:hmcts/expressjs-monorepo-template:pull_request'
+    - 'repo:hmcts/cath-service:ref:refs/heads/master'
+    - 'repo:hmcts/cath-service:pull_request'
   permissions:
     - role_definition_name: 'AcrPush'
       scopes:
