@@ -305,9 +305,9 @@
   subjects:
     - 'repo:hmcts/wa-slack-help-bot:ref:refs/heads/main'
     - 'repo:hmcts/wa-slack-help-bot:pull_request'
-    - 'repo:hmcts/darts-gateway:ref:refs/heads/main'
+    - 'repo:hmcts/darts-gateway:ref:refs/heads/master'
     - 'repo:hmcts/darts-gateway:pull_request'
-    - 'repo:hmcts/juror-scheduler-api:ref:refs/heads/main'
+    - 'repo:hmcts/juror-scheduler-api:ref:refs/heads/master'
     - 'repo:hmcts/juror-scheduler-api:pull_request'
   permissions:
     - role_definition_name: 'AcrPush'
