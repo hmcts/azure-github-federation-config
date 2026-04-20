@@ -311,6 +311,8 @@
     - 'repo:hmcts/juror-scheduler-api:pull_request'
     - 'repo:hmcts/rse-cft-lib:ref:refs/heads/main'
     - 'repo:hmcts/rse-cft-lib:pull_request'
+    - 'repo:hmcts/dtsse-ccd-config-generator:ref:refs/heads/main'
+    - 'repo:hmcts/dtsse-ccd-config-generator:pull_request'
   permissions:
     - role_definition_name: 'AcrPush'
       scopes:
