@@ -283,6 +283,8 @@
     - 'repo:hmcts/rd-slack-help-bot:pull_request'
     - 'repo:hmcts/rse-idam-simulator:ref:refs/heads/master'
     - 'repo:hmcts/rse-idam-simulator:pull_request'
+    - 'repo:hmcts/rse-cft-lib:ref:refs/heads/main'
+    - 'repo:hmcts/rse-cft-lib:pull_request'
     - 'repo:hmcts/telerik-poc-spa:ref:refs/heads/main'
     - 'repo:hmcts/telerik-poc-spa:pull_request'
     - 'repo:hmcts/telerik-poc-ssr:ref:refs/heads/main'
