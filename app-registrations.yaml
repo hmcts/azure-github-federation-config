@@ -313,6 +313,8 @@
     - 'repo:hmcts/rse-cft-lib:pull_request'
     - 'repo:hmcts/dtsse-ccd-config-generator:ref:refs/heads/master'
     - 'repo:hmcts/dtsse-ccd-config-generator:pull_request'
+    - 'repo:hmcts/amc-CaseMan:ref:refs/heads/master'
+    - 'repo:hmcts/amc-CaseMan:pull_request'
   permissions:
     - role_definition_name: 'AcrPush'
       scopes:
