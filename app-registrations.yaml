@@ -324,3 +324,14 @@
       scopes:
         - /subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/rpe-acr-prod-rg # DCD-CNP-Prod
         - /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/cnp-acr-rg # DCD-CFT-Sandbox
+- name: RSE SUPS CaseMan GitHub Actions Deployer
+  subjects:
+    - 'repo:hmcts/amc-CaseMan:ref:refs/heads/master'
+    - 'repo:hmcts/amc-CaseMan:pull_request'
+  permissions:
+    - role_definition_name: 'Azure Contributor Role minus deletes'
+      scopes:
+        - /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4 # DCD-CFTAPPS-DEV
+    - role_definition_name: 'Contributor'
+      scopes:
+        - /subscriptions/96c274ce-846d-4e48-89a7-d528432298a7 # DCD-CFTAPPS-STG
