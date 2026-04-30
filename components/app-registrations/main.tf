@@ -1,5 +1,9 @@
 terraform {
-  backend "azurerm" {}
+  backend "azurerm" {
+    storage_account_name = "c04d27a323c8691e1a263sa"
+    container_name       = "subscription-tfstate"
+    key                  = "UK South/app-registrations/azure-github-federation-config/prod/app-registrations/terraform.tfstate"
+  }
   required_version = "~> 1.14"
 }
 provider "azuread" {}
