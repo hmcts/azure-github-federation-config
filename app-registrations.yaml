@@ -281,7 +281,6 @@
     - 'repo:hmcts/rd-slack-help-bot:ref:refs/heads/master'
     - 'repo:hmcts/rd-slack-help-bot:pull_request'
     - 'repo:hmcts/rse-idam-simulator:ref:refs/heads/master'
-    - 'repo:hmcts/rse-idam-simulator:pull_request'
     - 'repo:hmcts/telerik-poc-spa:ref:refs/heads/main'
     - 'repo:hmcts/telerik-poc-spa:pull_request'
     - 'repo:hmcts/telerik-poc-ssr:ref:refs/heads/main'
@@ -330,6 +329,7 @@
     - 'repo:hmcts/dtsse-ccd-config-generator:pull_request'
     - 'repo:hmcts/amc-CaseMan:ref:refs/heads/master'
     - 'repo:hmcts/amc-CaseMan:pull_request'
+    - 'repo:hmcts/rse-idam-simulator:pull_request'
   permissions:
     - role_definition_name: 'AcrPull'
       scopes:
