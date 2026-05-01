@@ -12,10 +12,35 @@ variable "app_registrations" {
     subjects = list(string)
     // list of azure builtin role definitions to be assigned to each of defined scopes.
     permissions = list(object({
-      role_definition_name = string
-      scopes               = list(string)
+      role_definition_name     = string
+      scopes                   = list(string)
+      condition                = optional(string)
+      condition_version        = optional(string)
+      allowed_acr_repositories = optional(list(string), [])
     }))
   }))
+
+  validation {
+    condition = alltrue(flatten([
+      for app in var.app_registrations : [
+        for permission in app.permissions :
+        !(permission.condition != null && length(permission.allowed_acr_repositories) > 0)
+      ]
+    ]))
+    error_message = "Set either condition or allowed_acr_repositories for a permission, not both."
+  }
+
+  validation {
+    condition = alltrue(flatten([
+      for app in var.app_registrations : [
+        for permission in app.permissions : [
+          for subject in app.subjects :
+          !(length(permission.allowed_acr_repositories) > 0 && endswith(subject, ":pull_request"))
+        ]
+      ]
+    ]))
+    error_message = "Pull request subjects cannot be granted repository-scoped ACR write permissions. Put pull_request subjects under acr_registrations.readers instead."
+  }
 }
 
 variable "tenant_id" {
@@ -23,4 +48,3 @@ variable "tenant_id" {
   type        = string
   default     = null
 }
-

@@ -33,23 +33,40 @@ For those App Registrations set up for `GitHub Actions` please increment the nam
 Edit [app-registrations.yaml](app-registrations.yaml) and add new app registration as in below example:
 
 ```YAML
-- name: <name for the app registration>
-  subjects: # list of github repositories authorised to use this app registration
-    - 'repo:<org>/<repo>:ref:refs/heads/master'
-    - 'repo:<org>/<repo>:pull_request'
-  permissions: # list of azure builtin-roles to assign to each of scopes defined within it.
-    - role_definition_name: Reader
-      scopes: # list of scopes to assign
-        - /subscriptions/<subscription id>
-        - /subscriptions/<subscription id>/resourceGroups/<resource group>
-        - /subscriptions/<subscription id>/resourceGroups/<resource group>/<resource>
-    - role_definition_name: Contributor
-      scopes:
-        - /subscriptions/<subscription id>
-        - /subscriptions/<subscription id>/resourceGroups/<resource group>
-        - /subscriptions/<subscription id>/resourceGroups/<resource group>/<resource>
-        ...
+app_registrations:
+  - name: <name for the app registration>
+    subjects: # list of github repositories authorised to use this app registration
+      - 'repo:<org>/<repo>:ref:refs/heads/master'
+      - 'repo:<org>/<repo>:pull_request'
+    permissions: # list of azure builtin-roles to assign to each of scopes defined within it.
+      - role_definition_name: Reader
+        scopes: # list of scopes to assign
+          - /subscriptions/<subscription id>
+          - /subscriptions/<subscription id>/resourceGroups/<resource group>
+          - /subscriptions/<subscription id>/resourceGroups/<resource group>/<resource>
+      - role_definition_name: Contributor
+        scopes:
+          - /subscriptions/<subscription id>
+          - /subscriptions/<subscription id>/resourceGroups/<resource group>
+          - /subscriptions/<subscription id>/resourceGroups/<resource group>/<resource>
+
+acr_registrations:
+  prod_registry_scope: /subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.ContainerRegistry/registries/<registry>
+  readers:
+    - name: <short name>
+      subjects:
+        - 'repo:<org>/<repo>:pull_request'
+  writers:
+    - name: <short name>
+      subjects:
+        - 'repo:<org>/<repo>:ref:refs/heads/master'
+      repositories:
+        - <ACR repository name to allow writes to>
 ```
+
+For ACR-only GitHub Actions, prefer `acr_registrations`. Reader entries get production ACR image read access only. Writer entries get production ACR image read access plus repository-scoped writes generated with the Azure ABAC condition described in the Microsoft guide: https://learn.microsoft.com/en-us/azure/container-registry/container-registry-rbac-abac-repository-permissions.
+
+For non-ACR use cases, `condition` and `condition_version` can still be set directly in `app_registrations`; do not set both `condition` and `allowed_acr_repositories` on the same permission.
 
 ## License
 
