@@ -124,7 +124,6 @@
 - name: DTS Auto DB Query
   subjects:
     - 'repo:hmcts/postgresql-cron-jobs:ref:refs/heads/master'
-    - 'repo:hmcts/postgresql-cron-jobs:pull_request'
   permissions:
     - role_definition_name: 'Azure Kubernetes Service Cluster User Role'
       scopes:
