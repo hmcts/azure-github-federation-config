@@ -7,36 +7,25 @@ locals {
   // Helper for Azure ACR repository-scoped ABAC conditions.
   // See https://learn.microsoft.com/en-us/azure/container-registry/container-registry-rbac-abac-repository-permissions
   // The generated condition has two branches: non-repository data actions pass
-  // through, while ACR repository read/write data actions must target one of the
-  // repositories listed in allowed_acr_repositories.
-  acr_repository_condition_actions = [
-    "Microsoft.ContainerRegistry/registries/repositories/content/read",
-    "Microsoft.ContainerRegistry/registries/repositories/metadata/read",
-    "Microsoft.ContainerRegistry/registries/repositories/content/write",
-    "Microsoft.ContainerRegistry/registries/repositories/metadata/write",
-  ]
-  acr_repository_name_attribute = "@Request[Microsoft.ContainerRegistry/registries/repositories:name]"
-  acr_repository_sets = toset(flatten([
-    for app in var.app_registrations : [
-      for permission in app.permissions :
-      join("|", sort(permission.allowed_acr_repositories))
-      if length(permission.allowed_acr_repositories) > 0
-    ]
-  ]))
-  acr_repository_condition_by_repositories = {
-    for repositories in local.acr_repository_sets :
-    repositories => format(
-      "(\n  (\n    %s\n  )\n  OR\n  (\n    %s\n  )\n)",
-      join("\n    AND ", [
-        for action in local.acr_repository_condition_actions :
-        "!(ActionMatches{'${action}'})"
-      ]),
-      join("\n    OR ", [
-        for repository in split("|", repositories) :
-        "${local.acr_repository_name_attribute} StringEqualsIgnoreCase '${repository}'"
-      ])
+  // through, while ACR repository read/write data actions must target the
+  // repository listed in allowed_acr_repository.
+  acr_repository_condition_template = <<-EOT
+    (
+      (
+        !(ActionMatches{'Microsoft.ContainerRegistry/registries/repositories/content/read'})
+        AND
+        !(ActionMatches{'Microsoft.ContainerRegistry/registries/repositories/metadata/read'})
+        AND
+        !(ActionMatches{'Microsoft.ContainerRegistry/registries/repositories/content/write'})
+        AND
+        !(ActionMatches{'Microsoft.ContainerRegistry/registries/repositories/metadata/write'})
+      )
+      OR
+      (
+        @Request[Microsoft.ContainerRegistry/registries/repositories:name] StringEqualsIgnoreCase '%s'
+      )
     )
-  }
+  EOT
   role_assignment_values = flatten([
     for app in var.app_registrations : [
       for permission in app.permissions : [
@@ -45,10 +34,10 @@ locals {
           scope                = scope
           role_definition_name = permission.role_definition_name
           condition = permission.condition != null ? permission.condition : (
-            length(permission.allowed_acr_repositories) == 0 ? null : local.acr_repository_condition_by_repositories[join("|", sort(permission.allowed_acr_repositories))]
+            permission.allowed_acr_repository == null ? null : trimspace(format(local.acr_repository_condition_template, permission.allowed_acr_repository))
           )
           condition_version = (
-            permission.condition != null || length(permission.allowed_acr_repositories) > 0
+            permission.condition != null || permission.allowed_acr_repository != null
           ) ? coalesce(permission.condition_version, "2.0") : null
         }
       ]

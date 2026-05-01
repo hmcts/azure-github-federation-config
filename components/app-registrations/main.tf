@@ -38,9 +38,9 @@ locals {
           scopes               = [local.acr_registrations.prod_registry_scope]
         },
         {
-          role_definition_name     = "Container Registry Repository Writer"
-          scopes                   = [local.acr_registrations.prod_registry_scope]
-          allowed_acr_repositories = writer.repositories
+          role_definition_name   = "Container Registry Repository Writer"
+          scopes                 = [local.acr_registrations.prod_registry_scope]
+          allowed_acr_repository = writer.repository
         }
       ]
     }

@@ -60,13 +60,12 @@ acr_registrations:
     - name: <short name>
       subjects:
         - 'repo:<org>/<repo>:ref:refs/heads/master'
-      repositories:
-        - <ACR repository name to allow writes to>
+      repository: <ACR repository name to allow writes to>
 ```
 
 For ACR-only GitHub Actions, prefer `acr_registrations`. Reader entries get production ACR image read access only. Writer entries get production ACR image read access plus repository-scoped writes generated with the Azure ABAC condition described in the Microsoft guide: https://learn.microsoft.com/en-us/azure/container-registry/container-registry-rbac-abac-repository-permissions.
 
-For non-ACR use cases, `condition` and `condition_version` can still be set directly in `app_registrations`; do not set both `condition` and `allowed_acr_repositories` on the same permission.
+For non-ACR use cases, `condition` and `condition_version` can still be set directly in `app_registrations`; do not set both `condition` and `allowed_acr_repository` on the same permission.
 
 ## License
 

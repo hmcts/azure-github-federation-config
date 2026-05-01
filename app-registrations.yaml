@@ -334,5 +334,4 @@ acr_registrations:
     - name: RSE IDAM Simulator
       subjects:
         - 'repo:hmcts/rse-idam-simulator:ref:refs/heads/master'
-      repositories:
-        - hmcts/rse/rse-idam-simulator
+      repository: hmcts/rse/rse-idam-simulator
