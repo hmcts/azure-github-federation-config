@@ -158,6 +158,8 @@
     - 'repo:hmcts/jenkins-webhook-relay:pull_request'
     - 'repo:hmcts/cnp-node-base:ref:refs/heads/master'
     - 'repo:hmcts/cnp-node-base:pull_request'
+    - 'repo:hmcts/cnp-python-base:ref:refs/heads/main'
+    - 'repo:hmcts/cnp-python-base:pull_request'
   permissions:
     - role_definition_name: 'AcrPush'
       scopes:
