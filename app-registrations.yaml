@@ -182,6 +182,8 @@
     - 'repo:hmcts/hmcts-kubectl:pull_request'
     - 'repo:hmcts/cft-workspace:ref:refs/heads/master'
     - 'repo:hmcts/cft-workspace:pull_request'
+    - 'repo:hmcts/cnp-python-base:ref:refs/heads/main'
+    - 'repo:hmcts/cnp-python-base:pull_request'
   permissions:
     - role_definition_name: 'AcrPush'
       scopes:
