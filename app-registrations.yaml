@@ -334,3 +334,14 @@
     - role_definition_name: 'Log Analytics Reader'
       scopes:
         - /subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/oms-automation/providers/Microsoft.OperationalInsights/workspaces/hmcts-prod
+- name: DTS AMp Sandbox
+  subjects:
+    - 'repo:hmcts/amp-api-example:ref:refs/heads/main'
+    - 'repo:hmcts/amp-api-example:pull_request'
+  permissions:
+    - role_definition_name: 'API Management Service Contributor'
+      scopes:
+        - /subscriptions/bd2864ed-4f3e-45ed-9c6a-8d179674bab1/resourceGroups/rg-sps-platform-sbox/providers/Microsoft.ApiManagement/service/sps-api-mgmt-sbox
+    - role_definition_name: 'Reader'
+      scopes:
+        - /subscriptions/bd2864ed-4f3e-45ed-9c6a-8d179674bab1/resourceGroups/rg-sps-platform-sbox
