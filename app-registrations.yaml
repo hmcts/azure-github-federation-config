@@ -336,8 +336,8 @@
         - /subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/oms-automation/providers/Microsoft.OperationalInsights/workspaces/hmcts-prod
 - name: DTS AMp Sandbox
   subjects:
-    - 'repo:hmcts/amp-api-example:ref:refs/heads/main'
-    - 'repo:hmcts/amp-api-example:pull_request'
+    - 'repo:hmcts@22817111/amp-api-example@1303756986:pull_request'
+    - 'repo:hmcts@22817111/amp-api-example@1303756986:ref:refs/heads/main'
   permissions:
     - role_definition_name: 'API Management Service Contributor'
       scopes:
