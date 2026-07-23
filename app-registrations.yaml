@@ -347,4 +347,4 @@
         - /subscriptions/bd2864ed-4f3e-45ed-9c6a-8d179674bab1/resourceGroups/rg-sps-platform-sbox
     - role_definition_name: 'Storage Blob Data Contributor'
       scopes:
-        - - /subscriptions/bd2864ed-4f3e-45ed-9c6a-8d179674bab1/resourceGroups/rg-sps-platform-sbox/spsapimapisboxstate
+        - /subscriptions/bd2864ed-4f3e-45ed-9c6a-8d179674bab1/resourceGroups/rg-sps-platform-sbox/spsapimapisboxstate
