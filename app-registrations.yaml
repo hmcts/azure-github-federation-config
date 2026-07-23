@@ -334,6 +334,7 @@
     - 'repo:hmcts/amc-CaseMan:ref:refs/heads/master'
     - 'repo:hmcts/amc-CaseMan:pull_request'
     - 'repo:hmcts/rse-idam-simulator:pull_request'
+    - 'repo:hmcts/et-ccd-callbacks:pull_request'
   permissions:
     - role_definition_name: 'AcrPull'
       scopes:
