@@ -353,6 +353,8 @@
     - 'repo:hmcts@22817111/amp-api-example@1303756986:ref:refs/heads/main'
     - 'repo:hmcts/api-cp-crime-schedulingandlisting-courtschedule:pull_request'
     - 'repo:hmcts/api-cp-crime-schedulingandlisting-courtschedule:ref:refs/heads/main'
+    - 'repo:hmcts@22817111/api-cp-crime-results-pcr@1301837529:pull_request'
+    - 'repo:hmcts@22817111/api-cp-crime-results-pcr@1301837529:ref:refs/heads/main'
   permissions:
     - role_definition_name: 'API Management Service Contributor'
       scopes:
