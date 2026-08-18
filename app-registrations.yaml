@@ -355,6 +355,8 @@
     - 'repo:hmcts/api-cp-crime-hearing-results-document-subscription:pull_request'
     - 'repo:hmcts/api-cp-crime-hearing-results-document-subscription:ref:refs/heads/main'
     # newer repos created after ~2025 MUST use numeric format
+    - 'repo:hmcts@22817111/amp-api-example@1303756986:pull_request'
+    - 'repo:hmcts@22817111/amp-api-example@1303756986:ref:refs/heads/main'
     - 'repo:hmcts@22817111/api-cp-crime-results-pcr@1301837529:pull_request'
     - 'repo:hmcts@22817111/api-cp-crime-results-pcr@1301837529:ref:refs/heads/main'
   permissions:
