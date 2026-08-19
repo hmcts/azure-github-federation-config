@@ -108,6 +108,12 @@
     - 'repo:hmcts/hmcts.github.io:pull_request'
     - 'repo:hmcts/hmcts.github.io:environment:github-pages'
   permissions: []
+- name: DTS Ops runbook indexer
+  subjects:
+    - 'repo:hmcts/ops-runbooks:ref:refs/heads/main'
+    - 'repo:hmcts/ops-runbooks:pull_request'
+    - 'repo:hmcts/ops-runbooks:environment:github-pages'
+  permissions: []
 - name: DTS Recipe Receiver testing
   subjects:
     - 'repo:hmcts/recipe-receiver:ref:refs/heads/master'
