@@ -188,6 +188,7 @@
     - 'repo:hmcts/cft-workspace:pull_request'
     - 'repo:hmcts/cnp-python-base:ref:refs/heads/main'
     - 'repo:hmcts/cnp-python-base:pull_request'
+    - 'repo:hmcts/ccd-docker-user-profile-importer:environment:acr-publish'
   permissions:
     - role_definition_name: 'AcrPush'
       scopes:
