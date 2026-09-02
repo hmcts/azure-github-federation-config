@@ -382,3 +382,55 @@
     - role_definition_name: 'Storage Blob Data Contributor'
       scopes:
         - /subscriptions/bd2864ed-4f3e-45ed-9c6a-8d179674bab1/resourceGroups/rg-sps-platform-sbox/providers/Microsoft.Storage/storageAccounts/spsapimapisboxstate
+- name: DTS AMp Preview
+  subjects:
+    # Repos created on or before 15 July 2026 use the plain subject format.
+    - 'repo:hmcts/api-cp-crime-schedulingandlisting-courtschedule:pull_request'
+    - 'repo:hmcts/api-cp-crime-schedulingandlisting-courtschedule:ref:refs/heads/main'
+    - 'repo:hmcts/api-cp-crime-hearing-results-document-subscription:pull_request'
+    - 'repo:hmcts/api-cp-crime-hearing-results-document-subscription:ref:refs/heads/main'
+    - 'repo:hmcts/api-cp-refdata-courthearing-courthouses:pull_request'
+    - 'repo:hmcts/api-cp-refdata-courthearing-courthouses:ref:refs/heads/main'
+    - 'repo:hmcts/api-cp-crime-prosecution-case-details:pull_request'
+    - 'repo:hmcts/api-cp-crime-prosecution-case-details:ref:refs/heads/main'
+    - 'repo:hmcts/api-cp-crime-defendant-details:pull_request'
+    - 'repo:hmcts/api-cp-crime-defendant-details:ref:refs/heads/main'
+    # Repos created after 15 July 2026 use immutable subject claims (@org-id/@repo-id).
+    - 'repo:hmcts@22817111/api-cp-crime-results-pcr@1301837529:pull_request'
+    - 'repo:hmcts@22817111/api-cp-crime-results-pcr@1301837529:ref:refs/heads/main'
+  permissions:
+    - role_definition_name: 'API Management Service Contributor'
+      scopes:
+        - /subscriptions/7cfd7e05-06a1-4d9b-a426-db304bc99aab/resourceGroups/rg-sps-platform-preview/providers/Microsoft.ApiManagement/service/sps-api-mgmt-preview
+    - role_definition_name: 'Reader'
+      scopes:
+        - /subscriptions/7cfd7e05-06a1-4d9b-a426-db304bc99aab/resourceGroups/rg-sps-platform-preview
+    - role_definition_name: 'Storage Blob Data Contributor'
+      scopes:
+        - /subscriptions/7cfd7e05-06a1-4d9b-a426-db304bc99aab/resourceGroups/rg-sps-platform-preview/providers/Microsoft.Storage/storageAccounts/spsapimapipreviewstate
+- name: DTS AMp Staging
+  subjects:
+    # Repos created on or before 15 July 2026 use the plain subject format.
+    - 'repo:hmcts/api-cp-crime-schedulingandlisting-courtschedule:pull_request'
+    - 'repo:hmcts/api-cp-crime-schedulingandlisting-courtschedule:ref:refs/heads/main'
+    - 'repo:hmcts/api-cp-crime-hearing-results-document-subscription:pull_request'
+    - 'repo:hmcts/api-cp-crime-hearing-results-document-subscription:ref:refs/heads/main'
+    - 'repo:hmcts/api-cp-refdata-courthearing-courthouses:pull_request'
+    - 'repo:hmcts/api-cp-refdata-courthearing-courthouses:ref:refs/heads/main'
+    - 'repo:hmcts/api-cp-crime-prosecution-case-details:pull_request'
+    - 'repo:hmcts/api-cp-crime-prosecution-case-details:ref:refs/heads/main'
+    - 'repo:hmcts/api-cp-crime-defendant-details:pull_request'
+    - 'repo:hmcts/api-cp-crime-defendant-details:ref:refs/heads/main'
+    # Repos created after 15 July 2026 use immutable subject claims (@org-id/@repo-id).
+    - 'repo:hmcts@22817111/api-cp-crime-results-pcr@1301837529:pull_request'
+    - 'repo:hmcts@22817111/api-cp-crime-results-pcr@1301837529:ref:refs/heads/main'
+  permissions:
+    - role_definition_name: 'API Management Service Contributor'
+      scopes:
+        - /subscriptions/0978315c-75fe-4ada-9d11-1eb5e0e0b214/resourceGroups/rg-sps-platform-stg/providers/Microsoft.ApiManagement/service/sps-api-mgmt-stg
+    - role_definition_name: 'Reader'
+      scopes:
+        - /subscriptions/0978315c-75fe-4ada-9d11-1eb5e0e0b214/resourceGroups/rg-sps-platform-stg
+    - role_definition_name: 'Storage Blob Data Contributor'
+      scopes:
+        - /subscriptions/0978315c-75fe-4ada-9d11-1eb5e0e0b214/resourceGroups/rg-sps-platform-stg/providers/Microsoft.Storage/storageAccounts/spsapimapistgstate
