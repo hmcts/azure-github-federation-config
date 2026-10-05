@@ -429,10 +429,10 @@
   permissions:
     - role_definition_name: 'API Management Service Contributor'
       scopes:
-        - /subscriptions/0978315c-75fe-4ada-9d11-1eb5e0e0b214/resourceGroups/rg-sps-platform-stg/providers/Microsoft.ApiManagement/service/sps-api-mgmt-stg
+        - /subscriptions/70bea6e3-384f-4cf4-b551-743a78d716cd/resourceGroups/rg-sps-platform-aat/providers/Microsoft.ApiManagement/service/sps-api-mgmt-aat
     - role_definition_name: 'Reader'
       scopes:
-        - /subscriptions/0978315c-75fe-4ada-9d11-1eb5e0e0b214/resourceGroups/rg-sps-platform-stg
+        - /subscriptions/70bea6e3-384f-4cf4-b551-743a78d716cd/resourceGroups/rg-sps-platform-aat
     - role_definition_name: 'Storage Blob Data Contributor'
       scopes:
-        - /subscriptions/0978315c-75fe-4ada-9d11-1eb5e0e0b214/resourceGroups/rg-sps-platform-stg/providers/Microsoft.Storage/storageAccounts/spsapimapistgstate
+        - /subscriptions/70bea6e3-384f-4cf4-b551-743a78d716cd/resourceGroups/rg-sps-platform-aat/providers/Microsoft.Storage/storageAccounts/spsapimapiaatstate
