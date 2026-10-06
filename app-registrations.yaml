@@ -385,6 +385,9 @@
     - role_definition_name: 'Storage Blob Data Contributor'
       scopes:
         - /subscriptions/bd2864ed-4f3e-45ed-9c6a-8d179674bab1/resourceGroups/rg-sps-platform-sbox/providers/Microsoft.Storage/storageAccounts/spsapimapisboxstate
+    - role_definition_name: 'Key Vault Secrets Officer'
+      scopes:
+        - /subscriptions/bd2864ed-4f3e-45ed-9c6a-8d179674bab1/resourceGroups/rg-sps-platform-sbox/providers/Microsoft.KeyVault/vaults/kvspsplatformsbox
 - name: DTS AMp Preview
   subjects:
     # Repos created on or before 15 July 2026 use the plain subject format.
@@ -411,6 +414,9 @@
     - role_definition_name: 'Storage Blob Data Contributor'
       scopes:
         - /subscriptions/7cfd7e05-06a1-4d9b-a426-db304bc99aab/resourceGroups/rg-sps-platform-preview/providers/Microsoft.Storage/storageAccounts/spsapimapipreviewstate
+    - role_definition_name: 'Key Vault Secrets Officer'
+      scopes:
+        - /subscriptions/7cfd7e05-06a1-4d9b-a426-db304bc99aab/resourceGroups/rg-sps-platform-preview/providers/Microsoft.KeyVault/vaults/kvspsplatformpreview
 - name: DTS AMp Demo
   subjects:
     # Repos created on or before 15 July 2026 use the plain subject format.
@@ -515,6 +521,9 @@
     - role_definition_name: 'Storage Blob Data Contributor'
       scopes:
         - /subscriptions/70bea6e3-384f-4cf4-b551-743a78d716cd/resourceGroups/rg-sps-platform-aat/providers/Microsoft.Storage/storageAccounts/spsapimapiaatstate
+    - role_definition_name: 'Key Vault Secrets Officer'
+      scopes:
+        - /subscriptions/70bea6e3-384f-4cf4-b551-743a78d716cd/resourceGroups/rg-sps-platform-aat/providers/Microsoft.KeyVault/vaults/kvspsplatformaat
 - name: DTS AMp PROD
   subjects:
     # Repos created on or before 15 July 2026 use the plain subject format.
