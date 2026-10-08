@@ -114,6 +114,13 @@
     - 'repo:hmcts/ops-runbooks:pull_request'
     - 'repo:hmcts/ops-runbooks:environment:github-pages'
   permissions: []
+- name: DTS CFT Workspace doc drift
+  # Weekly doc-drift workflow on master only. Reads and rotates a twg sign-in
+  # kept in the dtsse-aat Key Vault, which grants it through an access policy
+  # (dtsse-shared-infrastructure), so it needs no Azure role here.
+  subjects:
+    - 'repo:hmcts/cft-workspace:ref:refs/heads/master'
+  permissions: []
 - name: DTS Recipe Receiver testing
   subjects:
     - 'repo:hmcts/recipe-receiver:ref:refs/heads/master'
