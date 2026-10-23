@@ -386,6 +386,8 @@
     - 'repo:hmcts@22817111/api-cp-crime-results-pcr@1301837529:ref:refs/heads/main'
     - 'repo:hmcts@22817111/try-cp-crime-schedulingandlisting-courtschedule@1401629026:pull_request'
     - 'repo:hmcts@22817111/try-cp-crime-schedulingandlisting-courtschedule@1401629026:ref:refs/heads/master'
+    - 'repo:hmcts@22817111/amp-try-it-now@1431212246:pull_request'
+    - 'repo:hmcts@22817111/amp-try-it-now@1431212246:ref:refs/heads/master'
   permissions:
     - role_definition_name: 'API Management Service Contributor'
       scopes:
