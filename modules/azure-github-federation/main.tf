@@ -28,9 +28,9 @@ resource "azuread_application" "this" {
   owners       = length(each.value.owners) == 0 ? [data.azuread_client_config.current.object_id] : concat([data.azuread_client_config.current.object_id], each.value.owners)
 }
 resource "azuread_service_principal" "this" {
-  for_each       = local.app_registrations_map
-  application_id = azuread_application.this[each.value.name].application_id
-  owners         = length(each.value.owners) == 0 ? [data.azuread_client_config.current.object_id] : concat([data.azuread_client_config.current.object_id], each.value.owners)
+  for_each  = local.app_registrations_map
+  client_id = azuread_application.this[each.value.name].client_id
+  owners    = length(each.value.owners) == 0 ? [data.azuread_client_config.current.object_id] : concat([data.azuread_client_config.current.object_id], each.value.owners)
 }
 resource "azurerm_role_assignment" "this" {
   for_each             = local.role_assignments_map
@@ -39,10 +39,10 @@ resource "azurerm_role_assignment" "this" {
   principal_id         = azuread_service_principal.this[each.value.app].object_id
 }
 resource "azuread_application_federated_identity_credential" "this" {
-  for_each              = local.federated_credentials_map
-  application_object_id = azuread_application.this[each.value.app].object_id
-  display_name          = replace(replace(each.value.subject, "/", "__"), ":", "_") // API is not accepting ":" or "/" replacing with "_" and "__"
-  audiences             = ["api://AzureADTokenExchange"]
-  issuer                = "https://token.actions.githubusercontent.com"
-  subject               = each.value.subject
+  for_each       = local.federated_credentials_map
+  application_id = azuread_application.this[each.value.app].id
+  display_name   = replace(replace(each.value.subject, "/", "__"), ":", "_") // API is not accepting ":" or "/" replacing with "_" and "__"
+  audiences      = ["api://AzureADTokenExchange"]
+  issuer         = "https://token.actions.githubusercontent.com"
+  subject        = each.value.subject
 }
