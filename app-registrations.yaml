@@ -121,6 +121,13 @@
   subjects:
     - 'repo:hmcts/cft-workspace:ref:refs/heads/master'
   permissions: []
+- name: DTS PCS Private Landlord progress tracker
+  # Daily publish workflow on master only. Reads and rotates a twg sign-in kept
+  # in a Key Vault, which grants it through an access policy, so it needs no
+  # Azure role here. The repository issues immutable subject claims.
+  subjects:
+    - 'repo:hmcts@22817111/pcs-private-landlord-progress-tracker@1451103556:ref:refs/heads/master'
+  permissions: []
 - name: DTS Recipe Receiver testing
   subjects:
     - 'repo:hmcts/recipe-receiver:ref:refs/heads/master'
