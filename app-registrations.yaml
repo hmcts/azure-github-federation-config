@@ -352,6 +352,7 @@
     - 'repo:hmcts/amc-CaseMan:pull_request'
     - 'repo:hmcts/rse-idam-simulator:pull_request'
     - 'repo:hmcts/et-ccd-callbacks:pull_request'
+    - 'repo:hmcts/et-ccd-callbacks:ref:refs/heads/master'
     - 'repo:hmcts/pcs-api:ref:refs/heads/master'
     - 'repo:hmcts/pcs-api:pull_request'
   permissions:
