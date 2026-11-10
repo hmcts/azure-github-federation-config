@@ -121,6 +121,10 @@
   subjects:
     - 'repo:hmcts/cft-workspace:ref:refs/heads/master'
   permissions: []
+- name: DTS PCS Private Landlord progress tracker
+  subjects:
+    - 'repo:hmcts@22817111/pcs-private-landlord-progress-tracker@1451103556:ref:refs/heads/master'
+  permissions: []
 - name: DTS Recipe Receiver testing
   subjects:
     - 'repo:hmcts/recipe-receiver:ref:refs/heads/master'
