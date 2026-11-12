@@ -388,6 +388,8 @@
     - 'repo:hmcts@22817111/amp-api-example@1303756986:ref:refs/heads/main'
     - 'repo:hmcts@22817111/api-cp-crime-results-pcr@1301837529:pull_request'
     - 'repo:hmcts@22817111/api-cp-crime-results-pcr@1301837529:ref:refs/heads/main'
+    - 'repo:hmcts@22817111/api-cp-crime-caseingestion-case@1302766338:pull_request'
+    - 'repo:hmcts@22817111/api-cp-crime-caseingestion-case@1302766338:ref:refs/heads/main'
     - 'repo:hmcts@22817111/try-cp-crime-schedulingandlisting-courtschedule@1401629026:pull_request'
     - 'repo:hmcts@22817111/try-cp-crime-schedulingandlisting-courtschedule@1401629026:ref:refs/heads/master'
     - 'repo:hmcts@22817111/amp-try-it-now@1431212246:pull_request'
