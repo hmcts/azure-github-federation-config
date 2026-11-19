@@ -404,6 +404,10 @@
     - role_definition_name: 'Storage Blob Data Contributor'
       scopes:
         - /subscriptions/bd2864ed-4f3e-45ed-9c6a-8d179674bab1/resourceGroups/rg-sps-platform-sbox/providers/Microsoft.Storage/storageAccounts/spsapimapisboxstate
+    # Lets the API repos' Terraform write each consumer's APIM subscription key to Key Vault.
+    - role_definition_name: 'Key Vault Secrets Officer'
+      scopes:
+        - /subscriptions/bd2864ed-4f3e-45ed-9c6a-8d179674bab1/resourceGroups/rg-sps-platform-sbox/providers/Microsoft.KeyVault/vaults/kvspsplatformsbox
 - name: DTS AMp Preview
   subjects:
     # Repos created on or before 15 July 2026 use the plain subject format.
@@ -458,6 +462,10 @@
     - role_definition_name: 'Storage Blob Data Contributor'
       scopes:
         - /subscriptions/058bf954-ac1f-462b-bca4-42a30314bd74/resourceGroups/rg-sps-platform-demo/providers/Microsoft.Storage/storageAccounts/spsapimapidemostate
+    # Lets the API repos' Terraform write each consumer's APIM subscription key to Key Vault.
+    - role_definition_name: 'Key Vault Secrets Officer'
+      scopes:
+        - /subscriptions/058bf954-ac1f-462b-bca4-42a30314bd74/resourceGroups/rg-sps-platform-demo/providers/Microsoft.KeyVault/vaults/kvspsplatformdemo
 - name: DTS AMp ITHC
   subjects:
     # Repos created on or before 15 July 2026 use the plain subject format.
@@ -566,3 +574,7 @@
     - role_definition_name: 'Storage Blob Data Contributor'
       scopes:
         - /subscriptions/890625e2-7a8b-445c-81b4-8044a062cef3/resourceGroups/rg-sps-platform-prod/providers/Microsoft.Storage/storageAccounts/spsapimapiprodstate
+    # Lets the API repos' Terraform write each consumer's APIM subscription key to Key Vault.
+    - role_definition_name: 'Key Vault Secrets Officer'
+      scopes:
+        - /subscriptions/890625e2-7a8b-445c-81b4-8044a062cef3/resourceGroups/rg-sps-platform-prod/providers/Microsoft.KeyVault/vaults/kvspsplatformprod
