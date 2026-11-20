@@ -331,6 +331,8 @@
     - 'repo:hmcts/darts-gateway:pull_request'
     - 'repo:hmcts/juror-scheduler-api:ref:refs/heads/master'
     - 'repo:hmcts/juror-scheduler-api:pull_request'
+    - 'repo:hmcts/pvp-api:environment:acr-publish'
+    - 'repo:hmcts/pvp-frontend:environment:acr-publish'
   permissions:
     - role_definition_name: 'AcrPush'
       scopes:
