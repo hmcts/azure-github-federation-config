@@ -426,6 +426,8 @@
     # Repos created after 15 July 2026 use immutable subject claims (@org-id/@repo-id).
     - 'repo:hmcts@22817111/api-cp-crime-results-pcr@1301837529:pull_request'
     - 'repo:hmcts@22817111/api-cp-crime-results-pcr@1301837529:ref:refs/heads/main'
+    - 'repo:hmcts@22817111/api-cp-civil-caseingestion-case@1461309431:pull_request'
+    - 'repo:hmcts@22817111/api-cp-civil-caseingestion-case@1461309431:ref:refs/heads/main'
   permissions:
     - role_definition_name: 'API Management Service Contributor'
       scopes:
