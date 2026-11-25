@@ -26,6 +26,12 @@ resource "azuread_application" "this" {
   for_each     = local.app_registrations_map
   display_name = each.value.name
   owners       = length(each.value.owners) == 0 ? [data.azuread_client_config.current.object_id] : concat([data.azuread_client_config.current.object_id], each.value.owners)
+
+  # This module doesn't manage API permissions, so ones granted outside it (such as Microsoft Graph read for a
+  # Terraform identity) would otherwise be removed by the next apply, whichever change triggered it.
+  lifecycle {
+    ignore_changes = [required_resource_access]
+  }
 }
 resource "azuread_service_principal" "this" {
   for_each  = local.app_registrations_map
