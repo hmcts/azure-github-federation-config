@@ -333,6 +333,7 @@
     - 'repo:hmcts/juror-scheduler-api:pull_request'
     - 'repo:hmcts@22817111/pvp-api@1453018312:environment:acr-publish'
     - 'repo:hmcts@22817111/pvp-frontend@1455204062:environment:acr-publish'
+    - 'repo:hmcts@22817111/cft-listing-data-api@1471911916:environment:acr-publish'
   permissions:
     - role_definition_name: 'AcrPush'
       scopes:
