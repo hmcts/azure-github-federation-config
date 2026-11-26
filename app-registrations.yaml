@@ -615,7 +615,7 @@
     # The Postgres server joins this subnet.
     - role_definition_name: 'Network Contributor'
       scopes:
-        - /subscriptions/96c274ce-846d-4e48-89a7-d528432298a7/resourceGroups/cft-aat-network-rg/providers/Microsoft.Network/virtualNetworks/cft-aat-vnet/subnets/postgresql # DCD-CFTAPPS-STG
+        - /subscriptions/96c274ce-846d-4e48-89a7-d528432298a7/resourceGroups/cft-aat-network-rg/providers/Microsoft.Network/virtualNetworks/cft-aat-vnet/subnets/postgres-expanded # DCD-CFTAPPS-STG
     # The Postgres server registers in this zone.
     - role_definition_name: 'Private DNS Zone Contributor'
       scopes:
