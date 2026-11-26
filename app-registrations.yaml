@@ -333,6 +333,7 @@
     - 'repo:hmcts/juror-scheduler-api:pull_request'
     - 'repo:hmcts@22817111/pvp-api@1453018312:environment:acr-publish'
     - 'repo:hmcts@22817111/pvp-frontend@1455204062:environment:acr-publish'
+    - 'repo:hmcts@22817111/cft-listing-data-api@1471911916:environment:acr-publish'
   permissions:
     - role_definition_name: 'AcrPush'
       scopes:
@@ -612,6 +613,44 @@
       scopes:
         - /subscriptions/96c274ce-846d-4e48-89a7-d528432298a7 # DCD-CFTAPPS-STG
     # The Postgres server joins this subnet.
+    - role_definition_name: 'Network Contributor'
+      scopes:
+        - /subscriptions/96c274ce-846d-4e48-89a7-d528432298a7/resourceGroups/cft-aat-network-rg/providers/Microsoft.Network/virtualNetworks/cft-aat-vnet/subnets/postgres-expanded # DCD-CFTAPPS-STG
+    # The Postgres server registers in this zone.
+    - role_definition_name: 'Private DNS Zone Contributor'
+      scopes:
+        - /subscriptions/1baf5470-1c3e-40d3-a6f7-74bfbce4b348/resourceGroups/core-infra-intsvc-rg/providers/Microsoft.Network/privateDnsZones/private.postgres.database.azure.com # DTS-CFTPTL-INTSVC
+    - role_definition_name: 'Storage Blob Data Contributor'
+      scopes:
+        - /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/mgmt-state-store-nonprod/providers/Microsoft.Storage/storageAccounts/mgmtstatestorenonprod/blobServices/default/containers/mgmtstatestorecontaineraat
+# cft-listing-data-api's Terraform for AAT (cnp-githubactions-library terraform-deploy-openid). Plan runs on pull
+# requests and is read only, except the state lease. Apply runs only from the protected GitHub environment terraform-aat.
+- name: DTS CFT Listing Terraform Plan AAT
+  subjects:
+    - 'repo:hmcts@22817111/cft-listing-data-api@1471911916:pull_request'
+  permissions:
+    - role_definition_name: 'Reader'
+      scopes:
+        - /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9 # DCD-CNP-DEV
+        - /subscriptions/96c274ce-846d-4e48-89a7-d528432298a7 # DCD-CFTAPPS-STG
+        - /subscriptions/1baf5470-1c3e-40d3-a6f7-74bfbce4b348/resourceGroups/core-infra-intsvc-rg/providers/Microsoft.Network/privateDnsZones/private.postgres.database.azure.com # DTS-CFTPTL-INTSVC
+    # A plan leases the state blob, so it needs write on state.
+    - role_definition_name: 'Storage Blob Data Contributor'
+      scopes:
+        - /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/mgmt-state-store-nonprod/providers/Microsoft.Storage/storageAccounts/mgmtstatestorenonprod/blobServices/default/containers/mgmtstatestorecontaineraat
+- name: DTS CFT Listing Terraform Apply AAT
+  subjects:
+    - 'repo:hmcts@22817111/cft-listing-data-api@1471911916:environment:terraform-aat'
+  permissions:
+    # Subscription scope because Terraform creates the cft-listing-aat resource group, and puts cft-listing-aat-mi in
+    # managed-identities-aat-rg.
+    - role_definition_name: 'Contributor'
+      scopes:
+        - /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9 # DCD-CNP-DEV
+    - role_definition_name: 'Reader'
+      scopes:
+        - /subscriptions/96c274ce-846d-4e48-89a7-d528432298a7 # DCD-CFTAPPS-STG
+    # The Postgres server joins this subnet. The original postgresql subnet is full in AAT.
     - role_definition_name: 'Network Contributor'
       scopes:
         - /subscriptions/96c274ce-846d-4e48-89a7-d528432298a7/resourceGroups/cft-aat-network-rg/providers/Microsoft.Network/virtualNetworks/cft-aat-vnet/subnets/postgres-expanded # DCD-CFTAPPS-STG
