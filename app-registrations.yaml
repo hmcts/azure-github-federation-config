@@ -439,6 +439,10 @@
     - role_definition_name: 'Storage Blob Data Contributor'
       scopes:
         - /subscriptions/7cfd7e05-06a1-4d9b-a426-db304bc99aab/resourceGroups/rg-sps-platform-preview/providers/Microsoft.Storage/storageAccounts/spsapimapipreviewstate
+    # Lets the API repos' Terraform write each consumer's APIM subscription key to Key Vault.
+    - role_definition_name: 'Key Vault Secrets Officer'
+      scopes:
+        - /subscriptions/7cfd7e05-06a1-4d9b-a426-db304bc99aab/resourceGroups/rg-sps-platform-preview/providers/Microsoft.KeyVault/vaults/kvspsplatformpreview
 - name: DTS AMp Demo
   subjects:
     # Repos created on or before 15 July 2026 use the plain subject format.
